@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
 import Header from '../Header'
 import Logo from '../Logo'
+import Nav from '../Nav'
+
 import styles from './index.module.scss'
 
 export default function Layout({ children }) {
@@ -8,12 +9,9 @@ export default function Layout({ children }) {
     <div className={styles.Layout}>
       <Header>
         <Logo />
+        <Nav />
       </Header>
-      <main className={styles.main}>{children}</main>
+      <main>{children}</main>
     </div>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.element,
 }
